@@ -97,14 +97,8 @@
       data() {
          return {
             addNote: false,
-<<<<<<< HEAD
             incidentReport: false,
             reportCard: false
-=======
-            incidentModal: false,
-            reportCard: false,
-
->>>>>>> 313a25af3354fae15a875a331f626a9e6ebb5d1f
          }
       },
       mounted() {
