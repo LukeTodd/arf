@@ -1,6 +1,7 @@
 let router = require('express').Router()
 let PetOwners = require('../models/petOwner')
-// let TimeCards = require('../models/timeCard')
+let TimeCard = require('../models/timecard')
+
 
 let baseRoute = '/petowners'
 //GET ALL
@@ -16,18 +17,26 @@ router.get(baseRoute, (req, res, next) => {
     })
 })
 
-//GET OWNER BAL
-// router.get(baseRoute + 'bal', (req, res, next) => {
-//   let petOwnerId = req.param('id')
-//   TimeCards.findById(petOwnerId)
-//   for (let i = 0; i < TimeCards.length; i++) {
-//     let ownerBal = PetOwners.balance
-//     ownerBal += TimeCards[i].billed
-//     return ownerBal
-//     //needs better syntax and probably some other stuff
-//   }
-
-// })
+// GET OWNER BAL
+router.get(baseRoute + '/bal/:id?', (req, res, next) => {
+  let petOwnerId = req.param('id')
+  let params = {}
+  if (petOwnerId) {
+    params.petOwnerId = petOwnerId
+  }
+  TimeCard.find(params)
+    .then(timeCards => {
+      let balances = {}
+      timeCards.forEach(timeCard => {
+        if (!balances[timeCard.petOwnerId]) {
+          balances[timeCard.petOwnerId] = 0
+        }
+        balances[timeCard.petOwnerId] += timeCard.billed
+      })
+      res.send(balances)
+    })
+    .catch(next)
+})
 
 
 

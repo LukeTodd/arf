@@ -10,8 +10,9 @@ connection.on('error', err => {
 })
 
 
-// connection.once('open', () => {
-//   console.log('Connected to Database')
+connection.once('open', () => {
+  console.log('Connected to Database')
+})
 //   connection.dropCollection('notes', (err, result) => {
 //     if (err) {
 //       console.log(err)

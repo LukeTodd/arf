@@ -32,7 +32,7 @@
                               {{'$' + hourRate().toFixed(2)}} </div>
                         </div>
                         <div class="modal-footer">
-                           <button type="button" class="btn btn-primary"
+                           <button type="button" data-dismiss="modal" class="btn btn-primary"
                               @click="billed(), $router.push({name: 'Billing'})">Charge Account</button>
                         </div>
                      </div>
