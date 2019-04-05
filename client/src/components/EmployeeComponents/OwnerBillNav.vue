@@ -50,7 +50,7 @@
     }
   }
 </script>
-<style>
+<style scoped>
   .landNav {
     background-color: #424c56;
     z-index: 5;

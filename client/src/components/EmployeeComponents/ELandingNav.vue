@@ -68,12 +68,12 @@
     components: {}
   }
 </script>
-<style>
+<style scoped>
   .landNav {
     top: 55px;
     background-color: #424c56;
     z-index: 5;
-    /* border-radius: 0 0 10px 10px; */
+    border-radius: 0 0 10px 10px;
     /* border-style: dashed;
     border-color: #f3f4f541; */
   }

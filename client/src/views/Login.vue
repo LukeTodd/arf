@@ -24,17 +24,17 @@
     <div class="row full">
 
       <div class="col-12 oneBar">
-        <h2>A r f</h2>
+        <h2 class="titleh2">A r f</h2>
         <p>is a CRM desgined for managing relationships and interactions with customers and their
           pets</p>
       </div>
       <div class="col-12 twoBar">
         <h3 class="explanation">as a business, you will create an account which gives you access to...</h3>
         <ul class="prettyList">
-          <li class="firstLine">all pet and owner info</li>
-          <li class="secondLine">pet checks ins and outs</li>
-          <li class="thirdLine">create/view reports on pets</li>
-          <li class="fourthLine">billing</li>
+          <li class="firstLine">All pet and owner info</li>
+          <li class="secondLine">Pet check-in/out</li>
+          <li class="thirdLine">Create/View reports on pets</li>
+          <li class="fourthLine">Billing</li>
         </ul>
       </div>
       <div class="col-12 threeBar">
@@ -76,6 +76,10 @@
 </script>
 
 <style scoped>
+  /* .login {
+    padding-bottom: ;
+  } */
+
   .action {
     cursor: pointer;
     color: white;
@@ -97,11 +101,11 @@
 
   .oneBar {
     background-color: black;
-    height: 250px;
+    height: 30vh;
   }
 
   .twoBar {
-    height: 335px;
+    min-height: 335px;
     background-color: white;
   }
 
@@ -111,6 +115,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center bottom;
+
   }
 
 
@@ -132,7 +137,7 @@
     }
   }
 
-  h2 {
+  .titleh2 {
     color: white;
     margin-top: 20px;
     font-size: 50px;

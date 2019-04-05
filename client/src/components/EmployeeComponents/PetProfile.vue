@@ -8,7 +8,7 @@
                   @click="checkIn(); timeIn()">CHECKIN</button>
                <button class="check btn-danger" v-if="activePet.checkedIn" @click="checkOut(); timeOut()">CHECK
                   OUT</button><br>
-               <img class="petimg" v-bind:src="activePet.img">
+               <img class="activepetimg" v-bind:src="activePet.img">
                <h6>Breed: {{activePet.breed}}</h6>
 
             </div>
@@ -47,7 +47,7 @@
             <div class="col-12">
                <br>
                <h5>Forms</h5>
-               <button @click="addNote = true, reportCard = false, incidentReport = false"
+               <button @click="addNote = true, reportCard = false, incidentReport = false" v-if="addNote "
                   class="btn btn-outline-light vall">Notes</button>
                <button @click="addNote = false, reportCard = true, incidentReport = false"
                   class="btn btn-outline-light vall">Report
@@ -104,7 +104,7 @@
          }
       },
       mounted() {
-         if (this.store.state.timeCard.length > 0) {
+         if (this.$store.state.timeCard.length > 0) {
             this.$store.dispatch('getTimeCard')
          }
       },
@@ -235,17 +235,19 @@
       }
    }
 </script>
-<style>
+<style scoped>
    .check {
       border-radius: 5px;
       margin: 5px;
       box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.644);
    }
 
-   .petimg {
+   .activepetimg {
       max-height: 30vh;
       min-height: 30vh;
       min-width: 23vw;
+      max-width: 24vw;
+      object-fit: cover;
       border-radius: 20px;
       margin-top: 10px;
       border-radius: 10px;

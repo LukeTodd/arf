@@ -4,7 +4,7 @@
     <div class="row">
       <div class="col-12 elheadr ">
         <!-- <h1 class="mb-5 text-white">hi</h1> -->
-        <div class="row d-flex justify-space-around">
+        <div class="row d-flex justify-content-around">
           <dog v-for="dog in petMatches.length ? petMatches : dogs" :dogData="dog"></dog>
         </div>
       </div>
@@ -49,13 +49,13 @@
 </script>
 <style scoped>
   .elheadr {
-    margin-top: 15vh;
+    margin-top: 7vh;
     /* padding: 0px; */
   }
 
   @media only screen and (max-width: 450px) {
     .elheadr {
-      margin-top: 30vh;
+      margin-top: 12vh;
     }
   }
 
@@ -65,10 +65,15 @@
     border-radius: 20px;
     flex-direction: row;
 
+
   }
 
   h1 {
     text-shadow: 1px 2px black;
     margin-top: 109px;
+  }
+
+  .eLanding {
+    padding-bottom: 70px;
   }
 </style>

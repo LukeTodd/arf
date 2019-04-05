@@ -19,7 +19,7 @@
   }
 </script>
 
-<style>
+<style scoped>
   .click:hover {
     cursor: pointer;
   }

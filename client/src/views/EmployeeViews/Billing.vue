@@ -61,7 +61,7 @@
     }
   }
 </script>
-<style>
+<style scoped>
   .ownerTitle {
     margin-top: 100px;
     margin-bottom: 47px;

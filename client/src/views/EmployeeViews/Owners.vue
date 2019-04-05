@@ -2,7 +2,9 @@
   <div class="row">
     <OwnerNav class="landNav"></OwnerNav>
     <div class="col-12">
-      <h1 class="ownerTitle"></h1>
+      <h1 class="ownerTitle">
+        Pet Owners
+      </h1>
 
     </div>
     <div class="col-12 col-md-3 offset-md-4">
@@ -53,19 +55,19 @@
 </script>
 <style scoped>
   .ownerTitle {
-    margin-top: 100px;
-    margin-bottom: 47px;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
   }
 
   .table {
-    margin-top: 50px;
+    margin-top: 5vh;
     margin-left: 102px;
   }
 
   @media only screen and (max-width: 450px) {
     .table {
       margin-left: 0px;
-      margin-top: 100px;
+      margin-top: 0vh;
 
     }
   }

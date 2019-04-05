@@ -34,9 +34,9 @@
     <div class="container-fluid">
       <router-view />
     </div>
-    <!-- <footer> -->
-    <!-- <p>Footer Goes Here</p> -->
-    <!-- </footer> -->
+    <footer class="footer">
+      <p>Footer Goes Here</p>
+    </footer>
   </div>
 </template>
 
@@ -59,7 +59,7 @@
   }
 </script>
 
-<style>
+<style scoped>
   #app {
     font-family: 'Montserrat', sans-serif;
     -webkit-font-smoothing: antialiased;
@@ -98,7 +98,14 @@
 
   }
 
-  footer {
-    padding-bottom: 3vh;
+  .footer {
+    position: relative;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+    padding-bottom: 1vh;
+    padding-top: 1vh;
+    cursor: pointer;
+    background-color: #d1d3d3;
   }
 </style>
