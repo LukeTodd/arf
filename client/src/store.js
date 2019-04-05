@@ -251,6 +251,13 @@ export default new Vuex.Store({
           commit('setNotes', res.data)
         })
     },
+    getAllNotes({ commit, dispatch }, payload) {
+      api.get('employee/petowners/all/pets/all/notes')
+        .then(res => {
+          console.log(res)
+          commit('setNotes', res.data)
+        })
+    },
     deleteNote({ commit, dispatch }, payload) {
       api.delete('employee/petowners/' + payload.petOwnerId + '/pets/' + payload.petId + '/notes/' + payload._id, payload)
         .then(res => {
@@ -260,6 +267,7 @@ export default new Vuex.Store({
     },
 
     //#endregion
+    //#region --TIMECARD--
     createTimeCard({ commit, dispatch }, payload) {
       api.post('employee/petowners/' + payload.petOwnerId + '/pets/' + payload.petId + '/timecard', payload)
         .then(res => {
@@ -282,5 +290,6 @@ export default new Vuex.Store({
       api.put('employee/petowners/' + payload.petOwnerId + '/pets/' + payload.petId + '/timecard/' + payload.timeCardId, payload)
 
     }
+    //#endregion
   }
 })

@@ -6,7 +6,8 @@
             <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
          </form>
       </nav>
-      <incident v-for="incident in incidents" :incidentData="incident"></incident>
+      <incident v-for="note in notes" :noteData="note">
+      </incident>
    </div>
 </template>
 
@@ -17,18 +18,20 @@
       name: "",
       props: [],
       mounted() {
-         this.$store.dispatch('getNotes')
+         this.$store.dispatch('getAllNotes')
       },
       data() {
          return {
          }
       },
       computed: {
-         incidents() {
+         notes() {
             return this.$store.state.notes
          }
       },
-      methods: {},
+      methods: {
+
+      },
       components: {
          Incident
       }

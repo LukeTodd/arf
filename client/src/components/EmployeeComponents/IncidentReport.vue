@@ -36,7 +36,7 @@
     },
     methods: {
       createNote() {
-        let name = this.notes.name
+        let name = this.notes.petName
         let behavior = this.notes.behavior
         let petId = this.$store.state.activePet._id
         let petOwnerId = this.$store.state.activePet.petOwnerId

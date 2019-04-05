@@ -4,7 +4,7 @@ let Pets = require('../models/pet')
 
 let baseRoute = '/petowners/:petOwnerId/pets'
 
-//GET
+//GET ALL
 //TESTED AND WORKS
 router.get(baseRoute, (req, res, next) => {
   let params = {}

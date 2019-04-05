@@ -15,10 +15,7 @@
   export default {
     name: "dog",
     props: ["dogData", "ownerData"],
-    mounted(
-
-    ) {
-    },
+    mounted() { },
     data() {
       return {}
     },

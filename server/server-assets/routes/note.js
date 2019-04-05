@@ -4,6 +4,18 @@ let Notes = require('../models/note')
 
 let baseRoute = '/petowners/:petOwnerId/pets/:petId/notes'
 
+//GET ALL NOTES
+router.get("/petowners/all/pets/all/notes", (req, res, next) => {
+  Notes.find({ flagged: "Incident" })
+    .then(data => {
+      res.send(data)
+    })
+    .catch(err => {
+      console.log(err)
+      next(err)
+    })
+})
+
 //GET
 //TESTED AND WORKS
 router.get(baseRoute, (req, res, next) => {
@@ -16,6 +28,7 @@ router.get(baseRoute, (req, res, next) => {
       next(err)
     })
 })
+
 //GET ONE
 //TESTED AND WORKS
 router.get(baseRoute + '/:id', (req, res, next) => {
@@ -28,6 +41,7 @@ router.get(baseRoute + '/:id', (req, res, next) => {
       next(err)
     })
 })
+
 
 
 //POST

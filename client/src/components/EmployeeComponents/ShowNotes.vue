@@ -16,7 +16,7 @@
                         :class="{'bg-info' : note.flagged == 'General', 'bg-warning' : note.flagged == 'Pet Report', 'bg-danger' : note.flagged == 'Incident'}">
                         <div class="row">
                           <div class="col-9">
-                            <p>{{note.petName}}</p>
+                            <p>Name: {{note.petName}}</p>
                             <p>Behavior: {{note.behavior}}</p>
                             <p>Diet: {{note.diet}}</p>
                             <p>Additional notes: {{note.body}}</p>
