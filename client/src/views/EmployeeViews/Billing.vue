@@ -7,10 +7,11 @@
 
     </div>
     <div class="col-12 col-md-8 offset-md-2">
-      <table class="table table-striped table-dark mt-5">
-        <thead>
+      <table class="table bg-light mt-5">
+        <thead class="thead-dark">
           <tr>
-            <th scope="">Owner Name</th>
+            <th scope="col">Owner Name</th>
+            <th scope="col">Current Balance</th>
           </tr>
           <br>
         </thead>
