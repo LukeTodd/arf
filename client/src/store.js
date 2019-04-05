@@ -31,7 +31,7 @@ export default new Vuex.Store({
     petMatches: [],
     ownerMatches: [],
     timeCard: [],
-    ownerBal: []
+    ownerBal: {}
   },
   mutations: {
     setOwnerMatches(state, data) {
