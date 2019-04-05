@@ -1,6 +1,7 @@
 <template>
-  <tr>
-    <td>{{ownerData.name}} -- Current Balance : $ {{getOwnerBal}}</td>
+  <tr class="bg-light">
+    <th scope="row">{{ownerData.name}}</th>
+    <td>$ {{getOwnerBal}}</td>
   </tr>
 </template>
 

@@ -6,8 +6,8 @@
 
     </div>
     <div class="col-12 col-md-3 offset-md-4">
-      <table class="table table-striped table-dark">
-        <thead>
+      <table class="table bg-light">
+        <thead class="thead-dark">
           <tr>
             <th scope="">Owner Name</th>
           </tr>
