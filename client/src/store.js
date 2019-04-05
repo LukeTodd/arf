@@ -30,7 +30,8 @@ export default new Vuex.Store({
     activePet: {},
     petMatches: [],
     ownerMatches: [],
-    timeCard: []
+    timeCard: [],
+    ownerBal: {}
   },
   mutations: {
     setOwnerMatches(state, data) {
@@ -86,6 +87,9 @@ export default new Vuex.Store({
     },
     lastTimeCard(state, data) {
       state.timeCard.pop()
+    },
+    setOwnerBal(state, data) {
+      state.ownerBal = data
     }
 
   },
@@ -124,6 +128,13 @@ export default new Vuex.Store({
     },
     //#endregion
     //#region -- OWNER STUFF
+    getAllOwnerBal({ commit, state }, payload) {
+
+      api.get('employee/petowners/bal/')
+        .then(res => {
+          commit('setOwnerBal', res.data)
+        })
+    },
     createOwner({ commit, state }, payload) {
       api.post('employee/petowners/', payload)
         .then(res => {
