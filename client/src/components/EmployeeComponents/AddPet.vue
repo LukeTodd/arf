@@ -22,7 +22,7 @@
                 <input class="formfield" type="url" v-model="newPet.img" name="Age" placeholder="Img:">
               </div>
               <div class="col-12 mt-3">
-                <button class="btn pagebtn btn-outline-light" data-dismiss="modal" type="submit">Submit</button>
+                <button class="btn pagebtn btn-outline-light" type="submit">Submit</button>
               </div>
             </form>
           </div>
