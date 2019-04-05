@@ -17,8 +17,8 @@
         </form>
       </div>
       <div class="action col-12" @click="loginForm = !loginForm">
-        <p v-if="loginForm">No account? Click here to Register</p>
-        <p v-else>Already have an account? Click here to Login</p>
+        <p class="formstuff" v-if="loginForm">No account? Click here to Register</p>
+        <p class="formstuff" v-else>Already have an account? Click here to Login</p>
       </div>
     </div>
     <div class="row full">
@@ -119,7 +119,7 @@
     margin-top: 100px;
     width: 244px;
     text-align: center;
-    margin-left: 525px;
+    margin-left: 594px;
   }
 
   @media only screen and (max-width: 450px) {
@@ -139,7 +139,7 @@
     font-family: 'Montserrat', sans-serif;
   }
 
-  p {
+  .formstuff {
     color: white;
     margin-top: 10px;
     font-size: 25px;

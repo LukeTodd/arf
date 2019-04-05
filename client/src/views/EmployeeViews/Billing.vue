@@ -7,7 +7,7 @@
 
     </div>
     <div class="col-12 col-md-8 offset-md-2">
-      <table class="table table-striped table-dark">
+      <table class="table table-striped table-dark mt-5">
         <thead>
           <tr>
             <th scope="">Owner Name</th>

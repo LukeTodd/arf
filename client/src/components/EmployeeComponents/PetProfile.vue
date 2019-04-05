@@ -102,7 +102,9 @@
          }
       },
       mounted() {
-         this.$store.dispatch('getTimeCard')
+         if (this.store.state.timeCard.length > 0) {
+            this.$store.dispatch('getTimeCard')
+         }
       },
       computed: {
          activePet() {
