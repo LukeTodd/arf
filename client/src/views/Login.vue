@@ -139,13 +139,14 @@
     font-family: 'Montserrat', sans-serif;
   }
 
+  /* 
   p {
     color: white;
     margin-top: 10px;
     font-size: 25px;
     font-family: 'Montserrat', sans-serif;
     text-shadow: 2px 2px black;
-  }
+  } */
 
   .explanation {
     text-align: center;

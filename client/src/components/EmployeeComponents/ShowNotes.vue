@@ -12,17 +12,16 @@
                 <div class="row">
                   <div class="col-10 offset-1 scroll">
                     <div class="row">
-                      <div class="col-12" v-for="note in notes"
+                      <div class="col-12 pt-2" v-for="note in notes"
                         :class="{'bg-info' : note.flagged == 'General', 'bg-warning' : note.flagged == 'Pet Report', 'bg-danger' : note.flagged == 'Incident'}">
                         <div class="row">
-                          <div class="col-9">
-                            <p>Name: {{note.petName}}</p>
+                          <div class="col-9 mt-1">
                             <p>Behavior: {{note.behavior}}</p>
                             <p>Diet: {{note.diet}}</p>
                             <p>Additional notes: {{note.body}}</p>
                           </div>
-                          <div class="col-3">
-                            <button @click="deleteNote(note)">Delete</button>
+                          <div class="col-3 mt-4">
+                            <button class="btn btn-outline-light" @click="deleteNote(note)">Delete</button>
                           </div>
                         </div>
                         <hr>

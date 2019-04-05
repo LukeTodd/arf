@@ -249,6 +249,8 @@
       border-radius: 10px;
       box-shadow: 3px 3px 3px #89a6b800;
       margin-bottom: 8px;
+      box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.61);
+      border-style: double;
    }
 
    .profCard {
@@ -299,9 +301,9 @@
       border-radius: 10px;
    }
 
-   p {
+   /* p {
       font-size: 25px;
-   }
+   } */
 
    .vall {
       margin-top: 10px;
