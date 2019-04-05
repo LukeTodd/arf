@@ -9,6 +9,8 @@
                <button class="check btn-danger" v-if="activePet.checkedIn" @click="checkOut(); timeOut()">CHECK
                   OUT</button><br>
                <img class="petimg" v-bind:src="activePet.img">
+               <h6>Breed: {{activePet.breed}}</h6>
+
             </div>
             <div class="col-12 offset-md-1 col-md-7">
                <edit-pet></edit-pet>
@@ -38,13 +40,13 @@
                      </div>
                   </div>
                </div>
-               <p>Breed: {{activePet.breed}}</p>
                <dog-note></dog-note>
             </div>
          </div>
          <div class="row ">
             <div class="col-12">
                <br>
+               <h5>Forms</h5>
                <button @click="addNote = true, reportCard = false, incidentReport = false"
                   class="btn btn-outline-light vall">Notes</button>
                <button @click="addNote = false, reportCard = true, incidentReport = false"
