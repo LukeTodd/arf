@@ -139,18 +139,13 @@
     font-family: 'Montserrat', sans-serif;
   }
 
-<<<<<<< HEAD
   .formstuff {
-=======
-  /* 
-  p {
->>>>>>> 0f2bd329a47277ef28a06114bbaf36258dafe97f
     color: white;
     margin-top: 10px;
     font-size: 25px;
     font-family: 'Montserrat', sans-serif;
     text-shadow: 2px 2px black;
-  } */
+  }
 
   .explanation {
     text-align: center;
