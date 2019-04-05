@@ -9,6 +9,8 @@
                <button class="check btn-danger" v-if="activePet.checkedIn" @click="checkOut(); timeOut()">CHECK
                   OUT</button><br>
                <img class="petimg" v-bind:src="activePet.img">
+               <h6>Breed: {{activePet.breed}}</h6>
+
             </div>
             <div class="col-12 offset-md-1 col-md-7">
                <edit-pet></edit-pet>
@@ -38,13 +40,13 @@
                      </div>
                   </div>
                </div>
-               <p>Breed: {{activePet.breed}}</p>
                <dog-note></dog-note>
             </div>
          </div>
          <div class="row ">
             <div class="col-12">
                <br>
+               <h5>Forms</h5>
                <button @click="addNote = true, reportCard = false, incidentReport = false"
                   class="btn btn-outline-light vall">Notes</button>
                <button @click="addNote = false, reportCard = true, incidentReport = false"
@@ -249,6 +251,8 @@
       border-radius: 10px;
       box-shadow: 3px 3px 3px #89a6b800;
       margin-bottom: 8px;
+      box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.61);
+      border-style: double;
    }
 
    .profCard {
@@ -299,9 +303,9 @@
       border-radius: 10px;
    }
 
-   p {
+   /* p {
       font-size: 25px;
-   }
+   } */
 
    .vall {
       margin-top: 10px;

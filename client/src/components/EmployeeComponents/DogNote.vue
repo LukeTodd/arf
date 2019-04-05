@@ -1,7 +1,5 @@
 <template>
   <div class="DogNote">
-
-    DOG NOTES HERE
   </div>
 </template>
 
