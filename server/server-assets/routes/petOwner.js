@@ -32,6 +32,7 @@ router.get(baseRoute + '/bal/:id?', (req, res, next) => {
           balances[timeCard.petOwnerId] = 0
         }
         balances[timeCard.petOwnerId] += timeCard.billed
+
       })
       res.send(balances)
     })

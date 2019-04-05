@@ -1,6 +1,6 @@
 <template>
   <tr>
-    <td>{{ownerData.name}} -- Current Balance : $ {{ownerData.balance}}</td>
+    <td>{{ownerData.name}} -- Current Balance : $ {{getOwnerBal}}</td>
   </tr>
 </template>
 
@@ -8,11 +8,20 @@
   export default {
     name: "ownerbill",
     props: ['ownerData'],
+    mounted() {
+      this.$store.dispatch('getAllOwnerBal')
+    },
     data() {
       return {}
     },
-    computed: {},
-    methods: {},
+    computed: {
+      getOwnerBal() {
+        return this.$store.state.ownerBal[this.ownerData._id] || 0
+      }
+    },
+    methods: {
+
+    },
     components: {}
   }
 </script>
