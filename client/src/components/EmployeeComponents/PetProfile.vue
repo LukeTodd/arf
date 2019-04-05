@@ -108,10 +108,6 @@
          }
       },
       mounted() {
-<<<<<<< HEAD
-=======
-
->>>>>>> 7c78cf7cbcfd7da35a23f1e6e8fcf370d413ff54
          if (this.$store.state.timeCard.length > 0) {
             this.$store.dispatch('getTimeCard')
          }
