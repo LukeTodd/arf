@@ -17,8 +17,11 @@
                <h5>{{pstatus}}</h5>
                <p>Checked in Time: {{timeCard.inTime | formatTime}} </p>
                <p>Checked out Time: {{timeCard.outTime | formatTime}}</p>
-               <p>Total Time: {{timeCard.totalTime | getHours}} <button class="btn btn-outline-success btn-sm"
-                     data-toggle="modal" data-target="#exampleModalCenter">Bill</button></p>
+
+               <p v-if="timeCard.totalTime">Total Time: {{timeCard.totalTime | getHours}} <button
+                     class="btn btn-outline-success btn-sm" data-toggle="modal"
+                     data-target="#exampleModalCenter">Bill</button></p>
+               <p v-else>Total Time: N/A</p>
                <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
                   aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                   <div class="modal-dialog modal-dialog-centered" role="document">
@@ -30,8 +33,9 @@
                            </button>
                         </div>
                         <div class="modal-body">
-                           <div class="text-dark">{{timeCard.totalTime | getHours}} x $4.00 =
+                           <div v-if="timeCard.totalTime" class="text-dark">{{timeCard.totalTime | getHours}} x $4.00 =
                               {{'$' + hourRate().toFixed(2)}} </div>
+                           <div v-else> hello </div>
                         </div>
                         <div class="modal-footer">
                            <button type="button" data-dismiss="modal" class="btn btn-primary"
@@ -104,7 +108,8 @@
          }
       },
       mounted() {
-         if (this.store.state.timeCard.length > 0) {
+
+         if (this.$store.state.timeCard.length > 0) {
             this.$store.dispatch('getTimeCard')
          }
       },
@@ -113,6 +118,7 @@
             return this.$store.state.activePet
          },
          timeCard() {
+
             return this.$store.state.timeCard || {}
          },
          pstatus() {
@@ -177,7 +183,7 @@
             let petOwnerId = this.$store.state.activePet.petOwnerId
             let outTime = Date.now()
             let inTime = this.$store.state.timeCard.inTime
-            let totalTime = outTime - inTime
+            let totalTime = outTime - inTime || 0
 
 
             let payload = {
