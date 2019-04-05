@@ -69,6 +69,9 @@ export default new Vuex.Store({
     clearActivePet(state, data) {
       Vue.set(state, "activePet", {})
     },
+    clearActiveOwner(state, data) {
+      Vue.set(state, "activeOwner", {})
+    },
     clearPets(state, data) {
       Vue.set(state, "pets", {})
     },
@@ -180,6 +183,7 @@ export default new Vuex.Store({
         .then(res => {
           console.log(res)
           commit('setPets', res.data)
+          commit('clearActiveOwner')
         })
     },
     getPetsByOwnerId({ commit, dispatch }, ownerId) {
@@ -188,7 +192,6 @@ export default new Vuex.Store({
           console.log(res)
           commit('setPets', res.data)
           commit('clearActivePet')
-
         })
     },
     getActivePet({ commit, dispatch }, payload) {
