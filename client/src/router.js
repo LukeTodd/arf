@@ -14,6 +14,8 @@ import Profile from './views/EmployeeViews/Profile.vue'
 import Registration from './views/EmployeeViews/Registration.vue'
 // @ts-ignore
 import Billing from './views/EmployeeViews/Billing.vue'
+// @ts-ignore
+import Invoice from './views/EmployeeViews/Invoice.vue'
 
 Vue.use(Router)
 
@@ -58,6 +60,11 @@ export default new Router({
       path: '/Billing',
       name: 'Billing',
       component: Billing
+    },
+    {
+      path: '/Invoice/:id',
+      name: 'Invoice',
+      component: Invoice
     }
   ]
 })
