@@ -8,7 +8,7 @@ let schema = new Schema({
   age: { type: String },
   breed: { type: String },
   img: { type: String, default: "" },
-  petOwnerId: { type: ObjectId, ref: 'PetOwner', required: true },
+  petOwnerId: { type: ObjectId, ref: 'PetOwner' },
   noteId: { type: ObjectId, ref: 'Note' },
   checkedIn: { type: Boolean, default: false },
   checkIn: { type: String, default: "" },
