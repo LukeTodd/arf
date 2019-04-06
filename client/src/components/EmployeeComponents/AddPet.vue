@@ -13,11 +13,12 @@
             <form class="row" @submit.prevent='createPet()'>
               <div class="col-12 formstuff">
                 <h3>Pet Information</h3>
-                <input class="formfield" type="text" v-model="newPet.name" name="Name" placeholder="Name:" required>
+                <input class="formfield mb-2" type="text" v-model="newPet.name" name="Name" placeholder="Name:"
+                  required>
                 <br>
-                <input class="formfield" type="text" v-model="newPet.breed" name="Breed" placeholder="Breed:">
+                <input class="formfield mb-2" type="text" v-model="newPet.breed" name="Breed" placeholder="Breed:">
                 <br>
-                <input class="formfield" type="number" v-model="newPet.age" name="Age" placeholder="Age:">
+                <input class="formfield mb-2" type="number" v-model="newPet.age" name="Age" placeholder="Age:">
                 <br>
                 <input class="formfield" type="url" v-model="newPet.img" name="Age" placeholder="Img:">
               </div>

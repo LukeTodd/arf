@@ -1,10 +1,6 @@
 <template>
   <div class="row registration">
-    <div class="col-12">
-      <h1 class=""></h1>
-
-    </div>
-    <div class="col-md-8 offset-md-2 col-12" v-if="registerForm">
+    <div class="col-md-8 offset-md-2 col-12 regbody" v-if="registerForm">
       <register-owner></register-owner>
     </div>
   </div>
@@ -36,5 +32,19 @@
 
   h1 {
     padding: 8vh;
+  }
+
+  .registration {
+    min-height: 94vh;
+  }
+
+  .regbody {
+    margin-top: 10vh;
+  }
+
+  @media only screen and (max-width: 450px) {
+    .regbody {
+      margin-top: 12vh;
+    }
   }
 </style>

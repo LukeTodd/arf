@@ -1,19 +1,18 @@
 <template>
    <div class="Incidents">
-      <nav class="navbar navbar-light landNav">
-         <form class="form-inline">
-            <input @input="" class="form-control mr-sm-2" type="search" placeholder="" aria-label="Search">
-            <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
-         </form>
-      </nav>
-      <incident v-for="note in notes" :noteData="note">
-      </incident>
+      <IncidentsNav class="landNav"></IncidentsNav>
+      <div class="row d-flex justify-content-around">
+         <div class="col-12 elheadr ">
+            <incident v-for="note in notes" :noteData="note"></incident>
+         </div>
+      </div>
    </div>
 </template>
 
 <script>
    import router from '@/router.js'
    import Incident from '@/components/EmployeeComponents/Incident.vue'
+   import IncidentsNav from '@/components/EmployeeComponents/IncidentsNav.vue'
    export default {
       name: "",
       props: [],
@@ -33,12 +32,21 @@
 
       },
       components: {
-         Incident
+         Incident,
+         IncidentsNav
       }
    }
 </script>
 <style scoped>
-   .Incidents {
-      padding-top: 120px;
+   .elheadr {
+      margin-top: 7vh;
+      min-height: 94vh;
+      /* padding: 0px; */
+   }
+
+   @media only screen and (max-width: 450px) {
+      .elheadr {
+         margin-top: 12vh;
+      }
    }
 </style>
