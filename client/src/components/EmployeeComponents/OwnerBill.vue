@@ -1,7 +1,8 @@
 <template>
   <tr class="bg-light">
     <th scope="row">{{ownerData.name}}</th>
-    <td>$ {{getOwnerBal}}</td>
+    <td>$ {{getOwnerBal}} <button @click="$router.push({name: 'Invoice', params: {id:ownerData._id}})">View
+        Invoice</button></td>
   </tr>
 </template>
 

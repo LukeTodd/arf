@@ -11,7 +11,7 @@
         <thead class="thead-dark">
           <tr>
             <th scope="col">Owner Name</th>
-            <th scope="col">Current Balance</th>
+            <th scope="col">Current Balance </th>
           </tr>
           <br>
         </thead>
