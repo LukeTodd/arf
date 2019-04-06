@@ -36,6 +36,7 @@
 
   .registration {
     min-height: 94vh;
+    padding-bottom: 15px;
   }
 
   .regbody {

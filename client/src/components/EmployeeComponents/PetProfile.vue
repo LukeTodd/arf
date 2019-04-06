@@ -22,7 +22,7 @@
                   All Notes</button>
                <show-notes></show-notes>
             </div>
-            <div class="col-12 offset-md-1 col-md-7  d-flex flex-column justify-content-center">
+            <div class="col-12 offset-md-1 col-md-7 d-flex flex-column justify-content-center">
                <h5>{{pstatus}}</h5>
                <p>Checked in Time: {{timeCard.inTime | formatTime}} </p>
                <p>Checked out Time: {{timeCard.outTime | formatTime}}</p>

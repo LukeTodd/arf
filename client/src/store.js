@@ -269,8 +269,10 @@ export default new Vuex.Store({
     getAllNotes({ commit, dispatch }, payload) {
       api.get('employee/petowners/all/pets/all/notes')
         .then(res => {
+          debugger
           console.log(res)
           commit('setNotes', res.data)
+          dispatch('getAllOwners')
         })
     },
     deleteNote({ commit, dispatch }, payload) {
