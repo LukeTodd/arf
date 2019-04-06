@@ -51,7 +51,7 @@
             <div class="col-12">
                <br>
                <h5>Forms</h5>
-               <button @click="addNote = true, reportCard = false, incidentReport = false" v-if="addNote "
+               <button @click="addNote = true, reportCard = false, incidentReport = false"
                   class="btn btn-outline-light vall">Notes</button>
                <button @click="addNote = false, reportCard = true, incidentReport = false"
                   class="btn btn-outline-light vall">Report

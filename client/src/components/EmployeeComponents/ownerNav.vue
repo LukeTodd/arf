@@ -1,5 +1,5 @@
 <template>
-  <div class=" OwnerNav">
+  <div class="OwnerNav">
     <nav class="navbar navbar-light landNav">
       <form class="form-inline">
         <input @input="findOwnerMatches" class="form-control mr-sm-2" type="search" placeholder="Search Owner Name..."
@@ -51,8 +51,10 @@
 </script>
 <style scoped>
   .landNav {
+    top: 55px;
     background-color: #424c56;
     z-index: 5;
-    border-radius: 0 0 10px 10px;
+    border-radius: 0px 0px 10px 10px;
+
   }
 </style>

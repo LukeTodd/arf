@@ -1,7 +1,7 @@
 <template>
   <div class="row">
-    <OwnerNav class="landNav"></OwnerNav>
     <div class="col-12">
+      <OwnerNav class="landNav"></OwnerNav>
       <h1 class="ownerTitle">
         Pet Owners
       </h1>
