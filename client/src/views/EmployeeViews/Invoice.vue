@@ -1,7 +1,9 @@
 <template>
   <div class="row">
-    <div class="col invoice-display">
-      <invoice-data :ownerData="owner" :dogData="dog"></invoice-data>
+    <div>
+      <div class="col invoice-display">
+        <invoice-data :ownerData="owner" :timeCardData="timeCard"></invoice-data>
+      </div>
     </div>
 
   </div>
@@ -17,7 +19,7 @@
     created() { },
     mounted() {
       this.$store.dispatch('getActiveOwner', this.$route.params.id)
-      // this.$store.dispatch('getPetsByOwnerId', this.$route.params.id)
+      this.$store.dispatch('getPetsByOwnerId', this.$route.params.id)
       this.$store.dispatch('clearTimeCard')
       let petArr = this.$store.state.pets.filter(p => p.petOwnerId == this.$route.params.id)
       for (let i = 0; i < petArr.length; i++) {
@@ -37,8 +39,8 @@
       owner() {
         return this.$store.state.activeOwner
       },
-      dog() {
-        return this.$store.state.pets
+      timeCard() {
+        return this.$store.state.timeCard
       }
 
     },
@@ -53,5 +55,6 @@
   .invoice-display {
     margin-top: 100px;
     min-height: 94vh;
+    margin-bottom: 25px;
   }
 </style>

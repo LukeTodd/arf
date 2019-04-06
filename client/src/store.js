@@ -86,7 +86,9 @@ export default new Vuex.Store({
       state.timeCard = data
     },
     addTimeCard(state, data) {
-      debugger
+      Vue.set(state.timeCard, data.petId, data.data)
+    },
+    addTimeCard2(state, data) {
       state.timeCard.push(data)
     },
     clearTimeCard(state) {
@@ -308,7 +310,8 @@ export default new Vuex.Store({
       api.get('employee/petowners/' + payload.petOwnerId + '/pets/' + payload.petId + '/timecard', payload)
         .then(res => {
           console.log(res)
-          commit('addTimeCard', res.data)
+          commit('addTimeCard2', res.data)
+          commit('addTimeCard', { data: res.data, petId: payload.petId })
         })
 
     },
