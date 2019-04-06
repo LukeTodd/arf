@@ -151,6 +151,7 @@ export default new Vuex.Store({
         })
     },
     getOwners({ commit, dispatch }, payload) {
+
       api.get('employee/petowners')
         .then(res => {
           console.log(res)
@@ -293,6 +294,10 @@ export default new Vuex.Store({
         .then(res => {
           if (!res.data.length) { commit('setTimeCard', res.data[res.data.length - 1]) }
         })
+    },
+    getTimeCardbyOwner({ commit, dispatch }, payload) {
+      api.get('employee/petowners/' + payload.petOwnerId + '/pets/' + payload.petId + '/timecard', payload)
+
     },
     editTimeCard({ commit, dispatch }, payload) {
       api.put('employee/petowners/' + payload.petOwnerId + '/pets/' + payload.petId + '/timecard/' + payload.timeCardId, payload)
