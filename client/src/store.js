@@ -85,6 +85,13 @@ export default new Vuex.Store({
     setTimeCard(state, data) {
       state.timeCard = data
     },
+    addTimeCard(state, data) {
+      debugger
+      state.timeCard.push(data)
+    },
+    clearTimeCard(state) {
+      state.timeCard = []
+    },
     lastTimeCard(state, data) {
       state.timeCard.pop()
     },
@@ -297,9 +304,11 @@ export default new Vuex.Store({
         })
     },
     getTimeCardbyOwner({ commit, dispatch }, payload) {
+
       api.get('employee/petowners/' + payload.petOwnerId + '/pets/' + payload.petId + '/timecard', payload)
         .then(res => {
-          commit('setTimeCard', res.data)
+          console.log(res)
+          commit('addTimeCard', res.data)
         })
 
     },
@@ -312,6 +321,9 @@ export default new Vuex.Store({
     submitTimeCard({ commit, dispatch }, payload) {
       api.put('employee/petowners/' + payload.petOwnerId + '/pets/' + payload.petId + '/timecard/' + payload.timeCardId, payload)
 
+    },
+    clearTimeCard({ commit }) {
+      commit('clearTimeCard')
     }
     //#endregion
   }
