@@ -1,10 +1,7 @@
 <template>
   <div class="row billing">
-    <OwnerBillNav class="landNav">
-    </OwnerBillNav>
     <div class="col-12">
-      <h1 class="ownerTitle"></h1>
-
+      <OwnerBillNav class="landNav"></OwnerBillNav>
     </div>
     <div class="col-12 col-md-8 offset-md-2">
       <table class="table bg-light mt-5">

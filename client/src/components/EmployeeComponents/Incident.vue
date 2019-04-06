@@ -2,6 +2,7 @@
   <div class="Incident col-12">
     <p>
       {{noteData.behavior}}
+      {{noteData.body}}
     </p>
   </div>
 </template>

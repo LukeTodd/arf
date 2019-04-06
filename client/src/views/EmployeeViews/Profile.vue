@@ -1,7 +1,6 @@
 <template>
   <div class="row petdetails">
     <div class="col-md-10 offset-md-1 col-12">
-      <h1>Profile Page</h1>
     </div>
     <div class="col-md-10 offset-md-1 col-12">
       <owner-profile></owner-profile>
@@ -34,6 +33,8 @@
 <style scoped>
   .petdetails {
     padding-top: 75px;
+    min-height: 94vh;
+
   }
 
   h1 {

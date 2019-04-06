@@ -1,5 +1,4 @@
 <template>
-
   <div class="editowner col-12">
     <div class="modal" tabindex="-1" role="dialog" id="editowner-modal">
       <div class="modal-dialog" role="document">
@@ -43,6 +42,7 @@
       data-target="#editowner-modal" @click="owner=activeOwner"></i>
     <hr>
   </div>
+
 </template>
 
 

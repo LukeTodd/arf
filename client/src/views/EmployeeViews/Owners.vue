@@ -2,12 +2,9 @@
   <div class="row">
     <div class="col-12">
       <OwnerNav class="landNav"></OwnerNav>
-      <h1 class="ownerTitle">
-        Pet Owners
-      </h1>
-
+      <h1 class="ownerTitle"></h1>
     </div>
-    <div class="col-12 col-md-3 offset-md-4">
+    <div class="col-12 col-md-3 offset-md-3">
       <table class="table bg-light">
         <thead class="thead-dark">
           <tr>
@@ -67,7 +64,7 @@
   @media only screen and (max-width: 450px) {
     .table {
       margin-left: 0px;
-      margin-top: 0vh;
+      margin-top: 8vh;
 
     }
   }

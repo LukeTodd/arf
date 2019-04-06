@@ -10,25 +10,29 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-              <a class="nav-link" @click="$router.push({name:'ELanding'})">Pets<span
-                  class="sr-only">(current)</span></a>
+              <a class="nav-link" @click="$router.push({name:'ELanding'})" data-target="#navbarSupportedContent"
+                data-toggle="collapse">Pets<span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" @click="$router.push({name:'Owners'})">Owners</a>
+              <a class="nav-link" @click="$router.push({name:'Owners'})" data-toggle="collapse"
+                data-target="#navbarSupportedContent">Owners</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" @click="$router.push({name:'Incidents'})">Incidents</a>
+              <a class="nav-link" @click="$router.push({name:'Incidents'})" data-toggle="collapse"
+                data-target="#navbarSupportedContent">Incidents</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" @click="$router.push({name:'Billing'})">Billing</a>
+              <a class="nav-link" @click="$router.push({name:'Billing'})" data-toggle="collapse"
+                data-target="#navbarSupportedContent">Billing</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" @click="$router.push({name:'Registration'})">Registration</a>
+              <a class="nav-link" @click="$router.push({name:'Registration'})" data-toggle="collapse"
+                data-target="#navbarSupportedContent">Registration</a>
             </li>
           </ul>
+          <button class="btn logoutbtn btn-outline-secondary" @click="logout"><i class="fas fa-sign-out-alt"></i>
+            Logout</button>
         </div>
-        <div><button class="btn logoutbtn btn-outline-secondary" @click="logout"><i class="fas fa-sign-out-alt"></i>
-            Logout</button></div>
       </nav>
     </div>
     <div class="container-fluid">

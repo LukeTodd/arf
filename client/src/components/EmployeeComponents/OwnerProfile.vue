@@ -17,10 +17,10 @@
           <p>Name: {{owner.eContactName}}</p>
           <hr>
           <p>Phone Number: {{owner.eContactNumber}}</p>
+          <edit-owner></edit-owner>
         </div>
-        <edit-owner></edit-owner>
 
-        <div class="col-4 col-md-3 petnames mt-3" v-for="pet in pets" @click="getActivePet(pet._id)">
+        <div class="col-6 col-md-3 petnames mt-3" v-for="pet in pets" @click="getActivePet(pet._id)">
           <div class="row">
             <div class="col-12 text-center pet-base">
               <p>{{pet.name}}</p>
@@ -93,8 +93,41 @@
   }
 
   .pet-thumb {
-    max-height: 150px;
+    max-height: 25vh;
+    min-height: 25vh;
+    min-width: 18vw;
+    max-width: 18vw;
+    object-fit: cover;
+    border-radius: 20px;
+    margin-top: 10px;
     border-radius: 10px;
+    box-shadow: 3px 3px 3px #89a6b800;
+    margin-bottom: 8px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.61);
+    border-style: double;
+  }
+
+  @media only screen and (max-width: 450px) {
+    .pet-thumb {
+      max-height: 25vh;
+      min-height: 25vh;
+      min-width: 37vw;
+      max-width: 37vw;
+      object-fit: cover;
+      border-radius: 20px;
+      margin-top: 10px;
+      border-radius: 10px;
+      box-shadow: 3px 3px 3px #89a6b800;
+      margin-bottom: 8px;
+      box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.61);
+      border-style: double;
+    }
+  }
+
+  @media only screen and (max-width: 450px) {
+    .petnames {
+      max-width: 42vw;
+    }
   }
 
   .newCard {
@@ -150,7 +183,7 @@
   }
 
   p {
-    font-size: 25px;
+    font-size: 15px;
   }
 
   @media only screen and (max-width: 450px) {

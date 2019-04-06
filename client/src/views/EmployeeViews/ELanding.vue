@@ -68,10 +68,10 @@
 
   }
 
-  h1 {
+  /* h1 {
     text-shadow: 1px 2px black;
     margin-top: 109px;
-  }
+  } */
 
   .eLanding {
     padding-bottom: 70px;

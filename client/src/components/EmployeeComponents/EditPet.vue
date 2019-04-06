@@ -31,7 +31,7 @@
         </div>
       </div>
     </div>
-    <i v-if="activePet.name" class="click fas fa-edit fa-3x text-white" data-toggle="modal" data-target="#edit-modal"
+    <i v-if="activePet.name" class="click fas fa-edit fa-2x text-white" data-toggle="modal" data-target="#edit-modal"
       @click="pet=activePet"></i>
   </div>
 </template>

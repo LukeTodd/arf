@@ -3,17 +3,26 @@
       <div class="col-12">
          <div v-if="activePet.name" class=" row">
             <div class="col-12 col-md-4">
-               <h2>{{activePet.name}}</h2>
+               <div class="row">
+                  <div class="col-6 offset-3">
+                     <h2>{{activePet.name}}</h2>
+                  </div>
+                  <div class="col-3">
+                     <edit-pet></edit-pet>
+                  </div>
+               </div>
                <button class=' check btn-success' v-if="!activePet.checkedIn"
-                  @click="checkIn(); timeIn()">CHECKIN</button>
-               <button class="check btn-danger" v-if="activePet.checkedIn" @click="checkOut(); timeOut()">CHECK
-                  OUT</button><br>
+                  @click="checkIn(); timeIn()">CHECK-IN</button>
+               <button class="check btn-danger" v-if="activePet.checkedIn"
+                  @click="checkOut(); timeOut()">CHECK-OUT</button><br>
                <img class="activepetimg" v-bind:src="activePet.img">
                <h6>Breed: {{activePet.breed}}</h6>
-
+               <button type="button" class="btn btn-outline-light vall" data-toggle="modal"
+                  data-target="#notes-modal">View
+                  All Notes</button>
+               <show-notes></show-notes>
             </div>
-            <div class="col-12 offset-md-1 col-md-7">
-               <edit-pet></edit-pet>
+            <div class="col-12 offset-md-1 col-md-7  d-flex flex-column justify-content-center">
                <h5>{{pstatus}}</h5>
                <p>Checked in Time: {{timeCard.inTime | formatTime}} </p>
                <p>Checked out Time: {{timeCard.outTime | formatTime}}</p>
@@ -67,14 +76,6 @@
             </div>
             <div class="col-12" v-show="reportCard">
                <report-card></report-card>
-            </div>
-            <div class="col-12">
-               <button type="button" class="btn btn-outline-light vall" data-toggle="modal"
-                  data-target="#notes-modal">View
-                  All Notes</button>
-               <show-notes>
-               </show-notes>
-
             </div>
          </div>
          <div class="row">
@@ -262,6 +263,15 @@
       border-style: double;
    }
 
+   @media only screen and (max-width: 450px) {
+      .activepetimg {
+         max-height: 30vh;
+         min-height: 30vh;
+         min-width: 75vw;
+         max-width: 75vw;
+      }
+   }
+
    .profCard {
       background-image: linear-gradient(#89a6b800, #384349);
       background-repeat: no-repeat;
@@ -280,6 +290,7 @@
       letter-spacing: 2px;
       align-items: center !important;
       border-radius: 20px;
+      margin-bottom: 15px;
    }
 
    .pet-card {

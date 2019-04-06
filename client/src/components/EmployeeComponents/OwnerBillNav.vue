@@ -52,7 +52,9 @@
 </script>
 <style scoped>
   .landNav {
+    top: 55px;
     background-color: #424c56;
     z-index: 5;
+    border-radius: 0px 0px 10px 10px;
   }
 </style>
