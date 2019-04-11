@@ -18,19 +18,8 @@
     name: "invoice",
     created() { },
     mounted() {
-      this.$store.dispatch('getActiveOwner', this.$route.params.id)
-      this.$store.dispatch('getPetsByOwnerId', this.$route.params.id)
-      this.$store.dispatch('clearTimeCard')
-      let petArr = this.$store.state.pets.filter(p => p.petOwnerId == this.$route.params.id)
-      for (let i = 0; i < petArr.length; i++) {
-        let petId = petArr[i]._id
-        let petOwnerId = this.$route.params.id
-        let payload = {
-          petOwnerId,
-          petId
-        }
-        this.$store.dispatch('getTimeCardbyOwner', payload)
-      }
+      let ownerId = this.$route.params.id
+      this.$store.dispatch('makeInvoice2', ownerId)
     },
     data() {
       return {}

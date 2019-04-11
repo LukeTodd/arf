@@ -40,7 +40,7 @@
                   Total Due:
                 </div>
                 <div class="col-3 offset-6">
-                  {{total()}}
+                  total here
                 </div>
               </div>
             </div>
@@ -70,14 +70,14 @@
       dogs() {
         return this.$store.state.pets
       },
-      total() {
-        debugger
-        let totalDue = 0
-        for ()
-          let time = this.$store.state.timeCard
-        return totalDue = + time
+      // total() {
+      //   debugger
+      //   let totalDue = 0
+      //   for ()
+      //     let time = this.$store.state.timeCard
+      //   return totalDue = + time
 
-      }
+      // }
     },
     filters: {
       formatTime(date) {

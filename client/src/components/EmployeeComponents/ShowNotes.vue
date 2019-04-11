@@ -1,48 +1,92 @@
 <template>
-  <div class="row">
-    <div class="showNotes col-12">
-      <div class="modal row" tabindex="-1" role="dialog" id="notes-modal">
-        <div class="modal-dialog col-12" role="document">
-          <div class="modal-content row">
-            <div class="col-12">
+  <div class="showNotes ">
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="notes-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle"
+      aria-hidden="true">
+      <div class="modal-dialog modal-dialog-scrollable" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">All Notes</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div v-for="note in notes"
+              :class="{'' : note.flagged == 'General', '' : note.flagged == 'Pet Report', '' : note.flagged == 'Incident'}">
               <div class="row">
-                <div class="col-12">
-                  <h5 class="modal-header">All Notes</h5>
+                <div class="col-9 mt-1">
+                  <p>Note Type: {{note.flagged}}</p>
+                  <p>Behavior: {{note.behavior}}</p>
+                  <p>Diet: {{note.diet}}</p>
+                  <p>Additional notes: {{note.body}}</p>
                 </div>
-                <div class="row">
-                  <div class="col-10 offset-1 scroll">
-                    <div class="row">
-                      <div class="col-12 pt-2" v-for="note in notes"
-                        :class="{'bg-info' : note.flagged == 'General', 'bg-warning' : note.flagged == 'Pet Report', 'bg-danger' : note.flagged == 'Incident'}">
-                        <div class="row">
-                          <div class="col-9 mt-1">
-                            <p>Behavior: {{note.behavior}}</p>
-                            <p>Diet: {{note.diet}}</p>
-                            <p>Additional notes: {{note.body}}</p>
-                          </div>
-                          <div class="col-3 mt-4">
-                            <button class="btn btn-outline-light" @click="deleteNote(note)">Delete</button>
-                          </div>
-                        </div>
-                        <hr>
-                      </div>
-                    </div>
-                  </div>
+                <div class="col-3 mt-4">
+                  <button class="btn btn-outline-light" @click="deleteNote(note)">Delete</button>
                 </div>
               </div>
+              <hr>
+            </div>
 
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span class="closebutton" aria-hidden="true">close</span>
-              </button>
-            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
           </div>
         </div>
       </div>
     </div>
   </div>
 </template>
+
+
+
+
+<!-- <template>
+  <div class="showNotes ">
+    <div class="modal row" tabindex="-1" role="dialog" id="notes-modal">
+      <div class="modal-dialog col-12" role="document">
+        <div class="modal-content row">
+          <div class="col-12">
+            <div class="row">
+              <div class="col-12">
+                <h5 class="modal-header">All Notes</h5>
+              </div>
+              <div class="row">
+                <div class="col-10 offset-1 scroll">
+                  <div class="row">
+                    <div class="col-12 pt-2" v-for="note in notes"
+                      :class="{'bg-info' : note.flagged == 'General', 'bg-warning' : note.flagged == 'Pet Report', 'bg-danger' : note.flagged == 'Incident'}">
+                      <div class="row">
+                        <div class="col-9 mt-1">
+                          <p>Behavior: {{note.behavior}}</p>
+                          <p>Diet: {{note.diet}}</p>
+                          <p>Additional notes: {{note.body}}</p>
+                        </div>
+                        <div class="col-3 mt-4">
+                          <button class="btn btn-outline-light" @click="deleteNote(note)">Delete</button>
+                        </div>
+                      </div>
+                      <hr>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span class="closebutton" aria-hidden="true">close</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template> -->
 
 
 <script>

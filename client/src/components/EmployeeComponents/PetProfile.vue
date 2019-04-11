@@ -91,7 +91,6 @@
    import EditPet from '@/components/EmployeeComponents/EditPet.vue'
    import IncidentReport from '@/components/EmployeeComponents/IncidentReport.vue'
    import AddNote from '@/components/EmployeeComponents/AddNote.vue'
-   import DogNote from '@/components/EmployeeComponents/DogNote.vue'
    import Moment from 'moment'
    import ReportCard from '@/components/EmployeeComponents/ReportCard.vue'
    import ShowNotes from '@/components/EmployeeComponents/ShowNotes.vue'
@@ -235,7 +234,6 @@
          EditPet,
          IncidentReport,
          AddNote,
-         DogNote,
          ReportCard,
          ShowNotes
       }
