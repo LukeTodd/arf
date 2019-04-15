@@ -40,11 +40,7 @@
                   Total Due:
                 </div>
                 <div class="col-3 offset-6">
-<<<<<<< HEAD
-                  total here
-=======
                   <!-- {{total()}} -->
->>>>>>> d4b380e149d2cc30f63746018b1a2afdd51bfd1b
                 </div>
               </div>
             </div>
