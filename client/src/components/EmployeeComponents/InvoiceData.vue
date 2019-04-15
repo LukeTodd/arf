@@ -40,7 +40,11 @@
                   Total Due:
                 </div>
                 <div class="col-3 offset-6">
+<<<<<<< HEAD
                   total here
+=======
+                  <!-- {{total()}} -->
+>>>>>>> d4b380e149d2cc30f63746018b1a2afdd51bfd1b
                 </div>
               </div>
             </div>
@@ -73,10 +77,17 @@
       // total() {
       //   debugger
       //   let totalDue = 0
+<<<<<<< HEAD
       //   for ()
       //     let time = this.$store.state.timeCard
       //   return totalDue = + time
 
+=======
+      //   for (){
+      //     let time = this.$store.state.timeCard
+      //   return totalDue = + time
+      //   }
+>>>>>>> d4b380e149d2cc30f63746018b1a2afdd51bfd1b
       // }
     },
     filters: {
