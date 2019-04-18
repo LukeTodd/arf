@@ -1,6 +1,7 @@
 <template>
-  <div class="Incident col-12">
+  <div class="Incident col-12" @click="$router.push({name: 'Profile', params: {id:noteData.petOwnerId}})">
     <p>
+      {{noteData.petName}}
       {{noteData.behavior}}
       {{noteData.body}}
     </p>

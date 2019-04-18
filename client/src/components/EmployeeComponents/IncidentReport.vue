@@ -3,9 +3,9 @@
     <div class="col-12">
       <form @submit.prevent='createNote()'>
         <h3 class="mt-2">File Incident</h3>
-        <input class="formfield" type="text" v-model="notes.name" name="Behavior" placeholder="Name:" required>
+        <input class="formfield" type="text" v-model="notes.petName" name="Namr" placeholder="Name:" required>
         <br>
-        <input class="formfield" type="text" v-model="notes.behavior" name="diet" placeholder="Behavior:" required>
+        <input class="formfield" type="text" v-model="notes.behavior" name="Behavior" placeholder="Behavior:" required>
         <br>
         <input class="formfield" type="text" v-model="notes.body" name="body" placeholder="Additional Notes:" required>
         <br>

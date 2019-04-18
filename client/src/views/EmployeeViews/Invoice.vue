@@ -18,6 +18,7 @@
     name: "invoice",
     created() { },
     mounted() {
+      this.$store.dispatch('makeInvoice', this.$route.params.id)
       this.$store.dispatch('getActiveOwner', this.$route.params.id)
       this.$store.dispatch('getPetsByOwnerId', this.$route.params.id)
       this.$store.dispatch('clearTimeCard')

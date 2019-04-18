@@ -327,7 +327,16 @@ export default new Vuex.Store({
     },
     clearTimeCard({ commit }) {
       commit('clearTimeCard')
-    }
+    },
     //#endregion
+
+
+    makeInvoice({ commit, dispatch }, ownerId) {
+      // api.get(...)
+      //   .then(
+      //     commit > 
+      //     api.get
+      //   )
+    }
   }
 })
