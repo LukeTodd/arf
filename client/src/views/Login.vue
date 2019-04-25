@@ -1,7 +1,7 @@
 <template>
   <div class="login">
-    <div class="row cuteDog">
-      <div class="col-12">
+    <div class="row cuteDog ">
+      <div class="col-4 offset-4 d-flex justify-content-center ">
         <form class="coolForm" v-if="loginForm" @submit.prevent="loginUser">
           <input class="form-control bg-transparent text-dark" type="email" v-model="creds.email" placeholder="email">
           <input class="form-control bg-transparent text-dark" type="password" v-model="creds.password"
@@ -124,7 +124,7 @@
     margin-top: 100px;
     width: 244px;
     text-align: center;
-    margin-left: 594px;
+    /* margin-left: 815px; */
   }
 
   @media only screen and (max-width: 450px) {
@@ -132,7 +132,7 @@
       margin-top: 86px;
       width: 244px;
       text-align: center;
-      margin-left: 43px;
+      /* margin-left: 70px; */
 
     }
   }
@@ -161,7 +161,7 @@
     text-align: left;
     margin-top: 30px;
     font-size: 19px;
-    margin-left: 450px;
+    margin-left: 770px;
     font-size: 30px;
     font-family: 'Montserrat', sans-serif;
   }

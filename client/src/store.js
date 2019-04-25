@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import Vuex from 'vuex'
+import Vuex, { Store } from 'vuex'
 import Axios from 'axios'
 import router from './router'
 
@@ -92,7 +92,7 @@ export default new Vuex.Store({
       state.timeCard.push(data)
     },
     clearTimeCard(state) {
-      state.timeCard = []
+      Vue.set(state, "timeCard", [])
     },
     lastTimeCard(state, data) {
       state.timeCard.pop()
@@ -169,10 +169,11 @@ export default new Vuex.Store({
     },
     getActiveOwner({ commit, dispatch }, ownerId) {
 
-      api.get('employee/petowners/' + ownerId)
+      return api.get('employee/petowners/' + ownerId)
         .then(res => {
           console.log(res)
           commit('setActiveOwner', res.data)
+          return true
         })
     },
     editOwner({ commit, dispatch }, payload) {
@@ -209,11 +210,12 @@ export default new Vuex.Store({
         })
     },
     getPetsByOwnerId({ commit, dispatch }, ownerId) {
-      api.get('employee/petowners/' + ownerId + '/pets')
+      return api.get('employee/petowners/' + ownerId + '/pets')
         .then(res => {
           console.log(res)
           commit('setPets', res.data)
           commit('clearActivePet')
+          return true
         })
     },
     getActivePet({ commit, dispatch }, payload) {
@@ -306,14 +308,12 @@ export default new Vuex.Store({
         })
     },
     getTimeCardbyOwner({ commit, dispatch }, payload) {
-
       api.get('employee/petowners/' + payload.petOwnerId + '/pets/' + payload.petId + '/timecard', payload)
         .then(res => {
           console.log(res)
           commit('addTimeCard2', res.data)
           commit('addTimeCard', { data: res.data, petId: payload.petId })
         })
-
     },
     editTimeCard({ commit, dispatch }, payload) {
       api.put('employee/petowners/' + payload.petOwnerId + '/pets/' + payload.petId + '/timecard/' + payload.timeCardId, payload)
@@ -330,6 +330,7 @@ export default new Vuex.Store({
     },
     //#endregion
 
+<<<<<<< HEAD
 
     makeInvoice({ commit, dispatch }, ownerId) {
       // api.get(...)
@@ -337,6 +338,22 @@ export default new Vuex.Store({
       //     commit > 
       //     api.get
       //   )
+=======
+    makeInvoice2({ state, dispatch }, ownerId) {
+      Promise.all([dispatch('getActiveOwner', ownerId),
+      dispatch('getPetsByOwnerId', ownerId), dispatch('clearTimeCard')])
+        .then(() => {
+          let petArr = [...state.pets]
+          for (let i = 0; i < petArr.length; i++) {
+            let { petOwnerId, _id: petId } = petArr[i]
+            let payload = {
+              petOwnerId,
+              petId
+            }
+            dispatch('getTimeCardbyOwner', payload)
+          }
+        })
+>>>>>>> 2b3bd14b23ab0868e8629411aabeb079c1312eb8
     }
   }
 })

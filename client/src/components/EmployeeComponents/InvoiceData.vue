@@ -73,10 +73,17 @@
       // total() {
       //   debugger
       //   let totalDue = 0
+<<<<<<< HEAD
+      //   for ()
+      //     let time = this.$store.state.timeCard
+      //   return totalDue = + time
+
+=======
       //   for (){
       //     let time = this.$store.state.timeCard
       //   return totalDue = + time
       //   }
+>>>>>>> d4b380e149d2cc30f63746018b1a2afdd51bfd1b
       // }
     },
     filters: {

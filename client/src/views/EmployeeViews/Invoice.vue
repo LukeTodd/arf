@@ -18,6 +18,7 @@
     name: "invoice",
     created() { },
     mounted() {
+<<<<<<< HEAD
       this.$store.dispatch('makeInvoice', this.$route.params.id)
       this.$store.dispatch('getActiveOwner', this.$route.params.id)
       this.$store.dispatch('getPetsByOwnerId', this.$route.params.id)
@@ -32,6 +33,10 @@
         }
         this.$store.dispatch('getTimeCardbyOwner', payload)
       }
+=======
+      let ownerId = this.$route.params.id
+      this.$store.dispatch('makeInvoice2', ownerId)
+>>>>>>> 2b3bd14b23ab0868e8629411aabeb079c1312eb8
     },
     data() {
       return {}

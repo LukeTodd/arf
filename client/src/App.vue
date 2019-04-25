@@ -38,8 +38,54 @@
     <div class="container-fluid">
       <router-view />
     </div>
-    <footer class="footer">
-      <p>Footer Goes Here</p>
+    <footer class="page-footer footer font-small blue pt-4">
+      <!-- Footer Links -->
+      <div class="container-fluid text-center text-md-left">
+        <div class="row">
+          <div class="col-md-6 mt-md-0 mt-3">
+            <h5 class="text-uppercase"></h5>
+            <p class="quote"><i>The dog lives for the day, the hour, even the moment... ~Robert Falcon Scott</i></p>
+          </div>
+          <hr class="clearfix w-100 d-md-none pb-3">
+          <!-- <div class="col-md-3 mb-md-0 mb-3">
+            <h5 class="text-uppercase">Links</h5>
+            <ul class="list-unstyled">
+              <li>
+                <a href="#!">Link 1</a>
+              </li>
+              <li>
+                <a href="#!">Link 2</a>
+              </li>
+              <li>
+                <a href="#!">Link 3</a>
+              </li>
+              <li>
+                <a href="#!">Link 4</a>
+              </li>
+            </ul>
+          </div> -->
+          <!-- <div class="col-md-3 mb-md-0 mb-3">
+            <h5 class="text-uppercase">Links</h5>
+            <ul class="list-unstyled">
+              <li>
+                <a href="#!">Link 1</a>
+              </li>
+              <li>
+                <a href="#!">Link 2</a>
+              </li>
+              <li>
+                <a href="#!">Link 3</a>
+              </li>
+              <li>
+                <a href="#!">Link 4</a>
+              </li>
+            </ul>
+          </div> -->
+        </div>
+      </div>
+      <div class="footer-copyright text-center py-3">© 2019 Copyright:
+        <a href="#"> ARF</a>
+      </div>
     </footer>
   </div>
 </template>
@@ -70,7 +116,6 @@
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
     color: black;
-    /* background-image: url('http://i.imgur.com/mOL5g.jpg'); */
     background-image: linear-gradient(#89a6b8, #384349);
     background-repeat: no-repeat;
     background-size: cover;
@@ -107,9 +152,13 @@
     bottom: 0px;
     right: 0px;
     left: 0px;
-    padding-bottom: 1vh;
-    padding-top: 1vh;
+    /* padding-bottom: 1vh;
+    padding-top: 1vh; */
     cursor: pointer;
     background-color: #d1d3d3;
+  }
+
+  .quote {
+    text-size-adjust: 10px;
   }
 </style>

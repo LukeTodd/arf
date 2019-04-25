@@ -11,7 +11,6 @@
     name: "ownerbill",
     props: ['ownerData'],
     mounted() {
-
       this.$store.dispatch('getAllOwnerBal')
     },
     data() {
