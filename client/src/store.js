@@ -330,30 +330,27 @@ export default new Vuex.Store({
     },
     //#endregion
 
-<<<<<<< HEAD
 
-    makeInvoice({ commit, dispatch }, ownerId) {
-      // api.get(...)
-      //   .then(
-      //     commit > 
-      //     api.get
-      //   )
-=======
-    makeInvoice2({ state, dispatch }, ownerId) {
-      Promise.all([dispatch('getActiveOwner', ownerId),
-      dispatch('getPetsByOwnerId', ownerId), dispatch('clearTimeCard')])
-        .then(() => {
-          let petArr = [...state.pets]
-          for (let i = 0; i < petArr.length; i++) {
-            let { petOwnerId, _id: petId } = petArr[i]
-            let payload = {
-              petOwnerId,
-              petId
-            }
-            dispatch('getTimeCardbyOwner', payload)
-          }
-        })
->>>>>>> 2b3bd14b23ab0868e8629411aabeb079c1312eb8
-    }
+    //   makeInvoice({ commit, dispatch }, ownerId) {
+    //     // api.get(...)
+    //     //   .then(
+    //     //     commit > 
+    //     //     api.get
+    //     //   )
+    //   makeInvoice2({ state, dispatch }, ownerId) {
+    //     Promise.all([dispatch('getActiveOwner', ownerId),
+    //     dispatch('getPetsByOwnerId', ownerId), dispatch('clearTimeCard')])
+    //       .then(() => {
+    //         let petArr = [...state.pets]
+    //         for (let i = 0; i < petArr.length; i++) {
+    //           let { petOwnerId, _id: petId } = petArr[i]
+    //           let payload = {
+    //             petOwnerId,
+    //             petId
+    //           }
+    //           dispatch('getTimeCardbyOwner', payload)
+    //         }
+    //       })
+    //   }
   }
 })
