@@ -1,5 +1,6 @@
 <template>
    <div class="Incidents">
+      PAGE IN PROGRESS
       <IncidentsNav class="landNav"></IncidentsNav>
       <div class="row d-flex justify-content-around">
          <div class="col-12 elheadr ">

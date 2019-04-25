@@ -1,6 +1,7 @@
 <template>
   <div class="row billing">
     <div class="col-12">
+      PAGE IN PROGRESS
       <OwnerBillNav class="landNav"></OwnerBillNav>
     </div>
     <div class="col-12 col-md-8 offset-md-2">
